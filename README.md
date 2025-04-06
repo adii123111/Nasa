@@ -20,7 +20,7 @@ To run this project locally, follow these steps:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/ArpitVK/nasa-app.git
+   git clone https://github.com/adii123111/Nasa
    cd nasa-app
 
 2. Install the dependencies
