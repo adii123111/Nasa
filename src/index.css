@@ -1,0 +1,168 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color: white;
+  background-color: #030615;
+}
+
+
+
+*{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+}
+#root{
+  min-height: 100vh;
+  display: flex;
+  display: relative;
+}
+.img-container{
+  display: flex;
+  flex-direction: column;
+}
+.bg-img{
+  width:100%;
+  height:100%;
+  flex: 1;
+  object-fit: cover;
+}
+.loadingState{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+.loadingState i{
+  font-size: 3rem;
+  animation: spin 2s linear infinite;
+}
+@keyframes spin{
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* Footer */
+footer{
+  position:fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  display: flex;
+  align-items: center;
+  justify-content:space-between ;
+  gap: 1rem;
+  padding:1rem;
+}
+footer div {
+  display: flex;
+  flex-direction: column;
+}
+footer h2 {
+  font-size: 1.4rem;
+}
+footer h1 {
+  font-size: 0.9rem;
+  font-weight: 200;
+}
+footer button{
+  background: transparent;
+  outline: none;
+  border: none;
+  padding: 1rem;
+  transition-duration: 200ms;
+  cursor: pointer;
+}
+footer button i{
+  color: white;
+  font-size: 1.8rem;
+}
+footer button:hover{
+  opacity: 0.7;
+}
+.bg-gradient{
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(to top, #030615,rgba(255,255,255,0));
+}
+/* Sidebar  */
+.sidebar{
+position:fixed;
+inset: 0;
+display: flex;
+
+}
+.bgOverLay{
+  position:absolute;
+  inset:0;
+  background:#030615;
+  opacity:0.6;
+}
+.sidebarContent{
+  z-index: 15;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  overflow-y: scroll;
+  height: 100%;
+  width: 50%;
+  max-width: 800px;
+  margin-left: auto;
+  background: #030615;
+}
+.sidebarContent button{
+  background: transparent;
+  border:none;
+  outline: none;
+  margin-right: auto;
+  cursor: pointer;
+  transition-duration: 200ms;
+  padding:1rem 0;
+}
+.sidebarContent button i{
+  color: white;
+  font-size: 1.8rem;
+}
+.sidebarContent button:hover{
+  opacity: 0.7rem;
+}
+.sidebarContent h2{
+  font-size: 1.4rem;
+  font-weight: 200;
+}
+.descContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.desc{
+  font-size: 1.1rem;
+  font-weight: 200;
+}
+
+@media (min-width:640px)and( max-width:1366) {
+  .sidebar{
+    position:relative;
+    min-width: 30%;
+    min-height: 100vh;
+    inset: unset;
+    box-shadow: 0 0 40px 1px #030615;
+  }
+  .sidebarContent{
+    margin: unset;
+    width: 100%;
+  }
+  .bgOverLay{
+    right: 0;
+    left: unset;
+    width: 100vh;
+  }
+}
